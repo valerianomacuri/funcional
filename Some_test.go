@@ -1,7 +1,6 @@
 package funcional
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -12,8 +11,6 @@ func TestSome(t *testing.T) {
 	result := Some(slice, func(value int) bool {
 		return (value % 2) == 0
 	})
-
-	fmt.Println(result)
 	//if is not even (par) lanza un error
 	if result != true {
 		t.Errorf("Se esperaba que sea par, pero se obtuvo impar")
