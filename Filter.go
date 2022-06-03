@@ -1,9 +1,8 @@
 package funcional
 
-func Filter[T any](s []T, f func(T) bool) []T {
-	var result []T
-	for _, value := range s {
-		if f(value) {
+func Filter[T any](slice []T, fn func(T) bool) (result []T) {
+	for _, value := range slice {
+		if fn(value) {
 			result = append(result, value)
 		}
 	}
